@@ -1,4 +1,5 @@
-#include <iostream>
+#pragma once
+#include "NodeStack.h"
 
 int main()
 {

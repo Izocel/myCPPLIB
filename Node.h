@@ -1,19 +1,33 @@
 #ifndef NODE_H
 #define NODE_H
-#include <iostream>
-
-template <typename T>
+template <class T>
 class Node
 {
 private:
-	T m_data; // élément contenant les données
-	Node* m_next; // lien vers la prochaine donnée de la série
+	T m_data;
+	Node* m_next;
 public:
-	Node(T data);
-	T* getData();
-	void setData(T data);
-	Node* getNext();
-	void setNext(Node* next);
+	Node(T data) : m_data{ data }, m_next{ nullptr } {}
+
+	void setData(T data)
+	{
+		m_data = data;
+	}
+
+	T getData()
+	{
+		return m_data;
+	}
+
+	void setNext(Node* next)
+	{
+		m_next = next;
+	}
+
+	Node* getNext()
+	{
+		return m_next;
+	}
 };
 
 #endif

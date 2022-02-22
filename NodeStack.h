@@ -1,26 +1,23 @@
-#ifndef NODESTACK_H
+ï»¿#ifndef NODESTACK_H
 #define NODESTACK_H
+
 #include "Node.h"
 
 template <class T>
 class NodeStack
 {
 private:
-	size_t m_size; // compteur pour le nombre d'éléments de la pile
-	size_t m_maxSize; // limite quand au nombre maximum d'élément de la pile
-	Node<T>* m_top{nullptr}; // pointeur vers l'élément du dessus de la pile
+	int m_size; // compteur pour le nombre d'ï¿½lï¿½ments de la pile
+	Node* m_top; // pointeur vers l'Ã©lÃ©ment du dessus de la pile
 public:
 	NodeStack();
 	~NodeStack();
-	void setMaxSize(size_t size); // définie le nombre d'élément maximum que prendra la pile
-	bool push(T data); // ajoute une donnée à la pile
-	T pop(); // enlève le premier élément sur le dessus de la pile
-	size_t getSize() const; // retroune le nombre d'éléments dans la pile
-	size_t getMaxSize() const; // retroune le nombre maximum de la pile
-	T* getTop() const; // retourne la donnée sur le dessus de la pile, sans modifier la pile
-	bool isFull() const;
-	bool isEmpty() const; // vrai si la pile est vide
-	void toString() const; // fonction utilitaire pour afficher l'état de la pile
+	int getSize(); // retroune le nombre d'Ã©lÃ©ments dans la pile
+	bool isEmpty(); // vrai si la pile est vide
+	void push(int data); // ajoute une donnÃ©e Ã  la pile
+	void pop(); // enlï¿½ve le premier Ã©lÃ©ment sur le dessus de la pile
+	int getTop(); // retourne la donnï¿½e sur le dessus de la pile, sans modifier la pile
+	void affichePile(); // fonction utilitaire pour afficher l'Ã©tat de la pile
 };
 
 #endif
